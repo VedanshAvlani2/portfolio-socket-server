@@ -4,7 +4,7 @@ const { Server } = require("socket.io");
 const httpServer = createServer();
 const io = new Server(httpServer, {
   cors: {
-    origin: "http://localhost:3000", // Your Next.js app URL
+    origin: "*",
     methods: ["GET", "POST"],
   },
 });
@@ -98,4 +98,5 @@ httpServer.listen(PORT, () => {
 ║  ✨ Waiting for connections...        ║
 ╚════════════════════════════════════════╝
   `);
+
 });
